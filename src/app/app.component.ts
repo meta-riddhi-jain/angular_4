@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'My Angular 4 app ';
+  obj= {
+    id: 1,
+    name: "Rajat"
+  }
+  isTrue = true;
+  onSubmit = function(user){
+    console.log(user);
+  }
 }

@@ -1,0 +1,18 @@
+<p>
+  product works!
+</p>
+<div class="main">
+    <h1>Product's List</h1>
+    <div class="addItems">
+      <input [(ngModel)]= "newProduct" placeholder="Add Product" class="addText" id="addText">
+      <button (click) = "pushProduct()" >Add</button>
+    </div>
+    <p class="errorMessage" *ngIf="invalidValue">Can not enter blank string</p>
+    <ul>
+      <li *ngFor = "let i of products; let index = index">
+        {{i.name | uppercase}} {{day | date: 'fullDate' | uppercase}}
+        <span (click) ="removeProduct(index)">x</span >
+      </li>
+    </ul>
+  </div>
+  

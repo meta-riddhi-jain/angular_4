@@ -1,0 +1,19 @@
+<p>
+  customers works!
+</p>
+{{arr | sort: 'asc'}}
+
+<form class="container" [formGroup] = "form" (ngSubmit) = "onSubmit(form.value)">
+    <input type="text" name="firstName" placeholder="First Name" formControlName = "firstName">
+    <br>
+    <input type="text" name="lastName" placeholder="Last Name" formControlName = "lastName">
+    <br>
+    <select name="languages" formControlName = "languages"> 
+      <option value="C++">C++</option>
+      <option value="java">Java</option>
+      <option value="angular">Angular</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" [disabled] = "!form.valid" value="submit">
+  </form>
